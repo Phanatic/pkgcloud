@@ -1,5 +1,5 @@
 {
-  "name": "pkgcloud",
+  "name": "@Phanatic/pkgcloud",
   "description": "An infrastructure-as-a-service agnostic cloud library for node.js",
   "version": "1.7.0",
   "author": "Charlie Robbins <charlie.robbins@gmail.com>",
@@ -25,9 +25,12 @@
       "email": "ross@kukulinski.com"
     }
   ],
+  "publishConfig": {
+    "registry":"https://npm.registry.github.com/"
+  },
   "repository": {
     "type": "git",
-    "url": "http://github.com/pkgcloud/pkgcloud.git"
+    "url": "http://github.com/Phanatic/pkgcloud.git"
   },
   "keywords": [
     "cloud",
