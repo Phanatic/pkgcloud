@@ -8,6 +8,6 @@ action "GitHub Action for npm" {
   secrets = ["GITHUB_TOKEN"]
   args = "publish -ddd"
   env = {
-    NPM_REGISTRY_URL = "https://npm.registry.github.com"
+    NPM_REGISTRY_URL = "npm.registry.github.com"
   }
 }
