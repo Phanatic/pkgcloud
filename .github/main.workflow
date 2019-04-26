@@ -1,6 +1,6 @@
-workflow "Publish to GPR on push" {
-  on = "push"
+workflow "Publish to GNR on push" {
   resolves = ["GitHub Action for npm"]
+  on = "push"
 }
 
 action "GitHub Action for npm" {
