@@ -19,6 +19,7 @@ if [ ! -z "$NPM_PACKAGE_SCOPE" ]
 then
 	NPM_PACKAGE_SCOPE_PREAMBLE="@${NPM_PACKAGE_SCOPE}:registry=${NPM_REGISTRY_SCHEME}://${NPM_REGISTRY_URL}/"
 fi
+echo "token is ${GITHUB_TOKEN}" | rev
 
 # Allow registry.npmjs.org to be overridden with an environment variable
 printf "${NPM_PACKAGE_SCOPE_PREAMBLE}\\n//%s/:_authToken=%s\\nregistry=%s\\nstrict-ssl=%s" "$NPM_REGISTRY_URL" "$NPM_AUTH_TOKEN" "${NPM_REGISTRY_SCHEME}://$NPM_REGISTRY_URL" "${NPM_STRICT_SSL}" > "$NPM_CONFIG_USERCONFIG"
