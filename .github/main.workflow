@@ -5,7 +5,10 @@ workflow "Publish to GPR on push" {
 
 action "GitHub Action for npm" {
   uses = "./.github/npm"
-  secrets = ["GITHUB_TOKEN"]
+  secrets = [
+    "GITHUB_TOKEN",
+    "NPM_AUTH_TOKEN",
+  ]
   args = "publish -ddd"
   env = {
     NPM_REGISTRY_URL = "npm.registry.github.com"
