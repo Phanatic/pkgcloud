@@ -1,8 +1,6 @@
 workflow "Publish to GPR on label" {
   on = "pull_request"
-  resolves = [
-    "Comment on PR",
-  ]
+  resolves = ["Auto-merge my pull requests"]
 }
 
 action "Publish to GPR" {
@@ -21,7 +19,7 @@ action "Publish to GPR" {
 }
 
 action "When label is gpr-npm-publish" {
-  needs= ["When PR is labeled"]
+  needs = ["When PR is labeled"]
   uses = "actions/bin/filter@3c0b4f0e63ea54ea5df2914b4fabf383368cd0da"
   args = "label npm-gpr-publish"
 }
@@ -36,4 +34,9 @@ action "When PR is labeled" {
   uses = "actions/bin/filter@3c0b4f0e63ea54ea5df2914b4fabf383368cd0da"
   runs = "action"
   args = "labeled"
+}
+
+action "Auto-merge my pull requests" {
+  uses = "./.github/merge-pr"
+  needs = ["Comment on PR"]
 }
