@@ -1,7 +1,7 @@
 {
   "name": "@Phanatic/pkgcloud",
   "description": "An infrastructure-as-a-service agnostic cloud library for node.js",
-  "version": "1.7.9",
+  "version": "1.7.10",
   "author": "Charlie Robbins <charlie.robbins@gmail.com>",
   "contributors": [
     {
