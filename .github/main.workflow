@@ -1,6 +1,6 @@
 workflow "Publish to GPR on label" {
   on = "pull_request"
-  resolves = ["Publish to GPR"]
+  resolves = ["Comment on PR"]
 }
 
 action "Publish to GPR" {
@@ -21,4 +21,10 @@ action "Publish to GPR" {
 action "When PR is labeled" {
   uses = "actions/bin/filter@3c0b4f0e63ea54ea5df2914b4fabf383368cd0da"
   args = "label npm-gpr-publish"
+}
+
+action "Comment on PR" {
+  uses = "./.github/comment"
+  needs = ["Publish to GPR"]
+  secrets = ["GITHUB_TOKEN"]
 }
