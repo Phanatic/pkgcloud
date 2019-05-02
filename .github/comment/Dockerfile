@@ -9,7 +9,8 @@ LABEL com.github.actions.name="Comment on PR"
 LABEL com.github.actions.description="Comments on the current PR"
 LABEL com.github.actions.icon="message-square"
 LABEL com.github.actions.color="yellow"
-
+RUN apk update && \
+	apk add curl jq
 COPY "entrypoint.sh" "/entrypoint.sh"
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["help"]
