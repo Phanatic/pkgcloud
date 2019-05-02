@@ -4,7 +4,7 @@ workflow "Publish to GPR on label" {
 }
 
 action "Publish to GPR" {
-  uses = "./.github/npm"
+  uses = "actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680"
   needs = [
     "When PR is labeled",
   ]
