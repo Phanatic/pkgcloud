@@ -39,4 +39,5 @@ action "When PR is labeled" {
 action "Auto-merge my pull requests" {
   uses = "./.github/merge-pr"
   needs = ["Comment on PR"]
+  secrets = ["GITHUB_TOKEN"]
 }
