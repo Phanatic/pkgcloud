@@ -10,7 +10,6 @@ action "Publish to GPR" {
   ]
   secrets = [
     "GITHUB_TOKEN",
-    "NPM_AUTH_TOKEN",
   ]
   args = "publish -ddd"
   env = {
