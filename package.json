@@ -65,7 +65,7 @@
     "fast-json-patch": "0.5.x",
     "filed": "^0.1.0",
     "gcloud": "^0.10.0",
-    "grpc": "^1.14.1",
+    "grpc": "^1.24.9",
     "ip": "^1.1.5",
     "liboneandone": "^1.2.0",
     "lodash": "^4.17.10",
