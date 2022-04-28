@@ -58,7 +58,7 @@
     "helion"
   ],
   "dependencies": {
-    "async": "^2.6.1",
+    "async": "^2.6.4",
     "aws-sdk": "^2.382.0",
     "errs": "^0.3.2",
     "eventemitter2": "^5.0.1",
