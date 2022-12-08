@@ -70,7 +70,7 @@
     "liboneandone": "^1.2.0",
     "lodash": "^4.17.10",
     "mime": "1.4.1",
-    "qs": "^6.5.2",
+    "qs": "^6.5.3",
     "request": "^2.88.0",
     "through2": "0.6.x",
     "url-join": "0.0.x",
